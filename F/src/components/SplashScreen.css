@@ -1,0 +1,33 @@
+.splash-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #F65C65; /* or your brand color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+.splash-logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  animation: logo-bounce 2s infinite;
+}
+
+.splash-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px;
+  color: #fff;
+}
+
+@keyframes logo-bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}

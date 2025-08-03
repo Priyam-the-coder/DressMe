@@ -1,0 +1,61 @@
+.theme-toggle-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.material-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.material-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.material-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.material-switch .slider .icon {
+  z-index: 1;
+}
+
+.material-switch input:checked + .slider {
+  background-color: #050505;
+}
+
+.material-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.material-switch input:checked + .slider:before {
+  transform: translateX(26px);
+}

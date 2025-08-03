@@ -1,0 +1,108 @@
+.login-form {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 360px;
+  margin: 40px auto;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-family: 'Great Vibes', cursive;
+  color: #f65c65;
+  font-size: 28px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: 0.3s;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.login-input:focus {
+  border-color: #f65c65;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(246, 92, 101, 0.3);
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .login-input {
+  padding-right: 40px; /* space for eye icon */
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.eye-icon:hover {
+  color: #333;
+}
+
+.login-button {
+  background: linear-gradient(90deg, #ff6a6a, #ffa07a);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.login-button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.App.dark .login-form {
+  background: #1c1c1c;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.App.dark .login-input {
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+.App.dark .login-input:focus {
+  background-color: #333;
+  border-color: #f65c65;
+  box-shadow: 0 0 5px rgba(246, 92, 101, 0.5);
+}
+
+/* ✅ Hide browser default eye icon */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
+}
+
+input[type="password"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
